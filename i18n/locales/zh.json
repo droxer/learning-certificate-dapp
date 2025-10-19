@@ -1,8 +1,50 @@
 {
+  "common": {
+    "title": "学习证书DApp",
+    "description": "在区块链上发行和管理学习证书",
+    "language": "语言"
+  },
+  "navigation": {
+    "home": "首页",
+    "mint": "发行证书"
+  },
+  "certificate": {
     "title": "学习成果证书",
+    "dashboard": "我的证书空间",
     "mintTitle": "发放新证书",
     "courseName": "课程名称",
+    "studentName": "学生姓名",
+    "recipient": "接收地址",
     "courseCode": "课程代码",
+    "completionDate": "完成日期",
+    "grade": "成绩",
+    "ipfsHash": "IPFS哈希",
     "submit": "提交",
-    "noCert": "尚未获得证书"
+    "noCert": "尚未获得证书",
+    "noCertHint": "当教师向当前地址颁发凭证后，它们会立即出现在这里。",
+    "view": "查看证书",
+    "issued": "颁发给",
+    "date": "日期",
+    "total": "证书数量",
+    "latest": "最新证书",
+    "course": "课程",
+    "pending": "待定"
+  },
+  "language": {
+    "english": "English",
+    "chinese": "中文",
+    "korean": "한국어"
+  },
+  "form": {
+    "required": "此字段为必填项",
+    "invalid": "输入无效"
+  },
+  "wallet": {
+    "connect": "连接钱包",
+    "connectTitle": "连接钱包以查看和解锁证书",
+    "ready": "钱包已就绪",
+    "connected": "已连接",
+    "disconnected": "未连接",
+    "address": "钱包地址"
   }
+}

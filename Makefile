@@ -10,8 +10,9 @@ help:
 	@echo ""
 	@echo "Usage:"
 	@echo "  make install          Install all dependencies"
-	@echo "  make dev              Start Hardhat node"
+	@echo "  make dev              Start development environment (Hardhat node)"
 	@echo "  make hardhat-node     Start Hardhat node"
+	@echo "  make next-dev         Start Next.js development server"
 	@echo "  make compile          Compile smart contracts"
 	@echo "  make test             Run smart contract tests"
 	@echo "  make deploy           Deploy smart contracts to local network"
@@ -22,13 +23,14 @@ help:
 # Install dependencies
 .PHONY: install
 install:
-	npm install
+	pnpm install
 
-# Start Hardhat node
+# Start development environment
 .PHONY: dev
 dev: hardhat-node
 	@echo "Development environment started!"
 	@echo "- Hardhat node running on http://127.0.0.1:8545"
+	@echo "To start Next.js dev server, run: make next-dev"
 
 # Start Hardhat node in background
 .PHONY: hardhat-node
@@ -39,25 +41,31 @@ hardhat-node:
 	@echo "Hardhat node started (PID: $$(cat $(NODE_PID_FILE)))"
 	@echo "Logs are being written to hardhat-node.log"
 
+# Start Next.js development server
+.PHONY: next-dev
+next-dev:
+	@echo "Starting Next.js development server..."
+	@pnpm next dev
+
 # Compile smart contracts
 .PHONY: compile
 compile:
-	npx hardhat compile
+	pnpm hardhat compile
 
 # Run tests
 .PHONY: test
 test:
-	npx hardhat test
+	pnpm hardhat test
 
 # Deploy contracts
 .PHONY: deploy
 deploy:
-	npx hardhat run scripts/deploy.ts
+	pnpm hardhat run scripts/deploy.ts
 
 # Clean build artifacts
 .PHONY: clean
 clean:
-	npx hardhat clean
+	pnpm hardhat clean
 
 # Stop all running services
 .PHONY: stop

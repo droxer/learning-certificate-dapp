@@ -1,8 +1,50 @@
 {
+  "common": {
+    "title": "Learning Certificates DApp",
+    "description": "Issue and manage learning certificates on the blockchain",
+    "language": "Language"
+  },
+  "navigation": {
+    "home": "Home",
+    "mint": "Mint Certificate"
+  },
+  "certificate": {
     "title": "Learning Certificates",
+    "dashboard": "Your certificate vault",
     "mintTitle": "Mint New Certificate",
     "courseName": "Course Name",
+    "studentName": "Student Name",
+    "recipient": "Recipient address",
     "courseCode": "Course Code",
+    "completionDate": "Completion Date",
+    "grade": "Grade",
+    "ipfsHash": "IPFS Hash",
     "submit": "Submit",
-    "noCert": "No certificates yet"
+    "noCert": "No certificates yet",
+    "noCertHint": "Once educators mint credentials to your address, they will appear here instantly.",
+    "view": "View Certificate",
+    "issued": "Issued to",
+    "date": "Date",
+    "total": "Certificates",
+    "latest": "Latest credential",
+    "course": "Course",
+    "pending": "Pending"
+  },
+  "language": {
+    "english": "English",
+    "chinese": "中文",
+    "korean": "한국어"
+  },
+  "form": {
+    "required": "This field is required",
+    "invalid": "Invalid input"
+  },
+  "wallet": {
+    "connect": "Connect Wallet",
+    "connectTitle": "Authenticate with your wallet to unlock certificates",
+    "ready": "Wallet ready",
+    "connected": "Connected",
+    "disconnected": "Disconnected",
+    "address": "Wallet address"
   }
+}
