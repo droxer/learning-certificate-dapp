@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useMemo, useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { RainbowKitProvider, getDefaultWallets } from "@rainbow-me/rainbowkit";
 import { WagmiProvider } from "wagmi";
@@ -15,25 +15,29 @@ declare global {
 
 export function AppProviders({ children }: { children: ReactNode }) {
   const [queryClient] = useState(() => new QueryClient());
-  const [wagmiConfig, setWagmiConfig] = useState<Config | null>(
-    () => (typeof window !== "undefined" ? globalThis.__WAGMI_CONFIG__ ?? null : null),
-  );
+  const [isBrowserReady, setIsBrowserReady] = useState(false);
 
   useEffect(() => {
-    if (wagmiConfig) {
-      return;
+    setIsBrowserReady(true);
+  }, []);
+
+  const wagmiConfig = useMemo<Config | null>(() => {
+    if (!isBrowserReady || typeof window === "undefined") {
+      return null;
     }
 
-    const { connectors } = getDefaultWallets({
-      appName: "Learning Certificate DApp",
-      projectId: "YOUR_PROJECT_ID", // Replace with your actual WalletConnect project ID
-      chains,
-    });
+    if (!globalThis.__WAGMI_CONFIG__) {
+      const { connectors } = getDefaultWallets({
+        appName: "Learning Certificate DApp",
+        projectId: "YOUR_PROJECT_ID", // Replace with your actual WalletConnect project ID
+        chains,
+      });
 
-    const config = createWagmiConfig(connectors);
-    globalThis.__WAGMI_CONFIG__ = config;
-    setWagmiConfig(config);
-  }, [wagmiConfig]);
+      globalThis.__WAGMI_CONFIG__ = createWagmiConfig(connectors);
+    }
+
+    return globalThis.__WAGMI_CONFIG__ ?? null;
+  }, [isBrowserReady]);
 
   if (!wagmiConfig) {
     return (
