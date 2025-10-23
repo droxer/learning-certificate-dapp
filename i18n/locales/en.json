@@ -2,11 +2,26 @@
   "common": {
     "title": "Learning Certificates DApp",
     "description": "Issue and manage learning certificates on the blockchain",
-    "language": "Language"
+    "language": "Language",
+    "selectLanguage": "Select Language",
+    "loading": "Loading...",
+    "loadingSection": "Loading section...",
+    "loadingComponent": "Loading component...",
+    "theme": "Theme",
+    "theme.switchToDark": "Switch to dark theme",
+    "theme.switchToLight": "Switch to light theme",
+    "beta": "Beta",
+    "optionalField": "Optional: {{field}}"
+  },
+  "header": {
+    "title": "Learning Certificate",
+    "tagline": "Secure Skills, Verified Progress"
   },
   "navigation": {
     "home": "Home",
-    "mint": "Mint Certificate"
+    "mint": "Mint Certificate",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "certificate": {
     "title": "Learning Certificates",
@@ -26,9 +41,35 @@
     "issued": "Issued to",
     "date": "Date",
     "total": "Certificates",
+    "totalCount_one": "{{count}} Certificate",
+    "totalCount_other": "{{count}} Certificates",
     "latest": "Latest credential",
     "course": "Course",
-    "pending": "Pending"
+    "pending": "Pending",
+    "studentNameRequired": "Student name is required",
+    "recipientRequired": "Recipient address is required",
+    "recipientInvalid": "Please enter a valid Ethereum address",
+    "courseNameRequired": "Course name is required",
+    "completionDateRequired": "Completion date is required",
+    "issuanceChecklist": "Issuance Checklist",
+    "statistics": "Statistics",
+    "metrics": {
+      "minted": "Certificates minted",
+      "courses": "Active courses",
+      "wallets": "Verified wallets"
+    },
+    "details": "Certificate Details",
+    "preview": "Preview",
+    "previewDescription": "This is a preview of the certificate that will be minted.",
+    "mintSuccessDemo": "Certificate minted successfully! (Demo only)",
+    "ipfsLabel": "IPFS",
+    "ipfsReminder": "Store your media proof on IPFS before minting to unlock trustless verification.",
+    "samples": {
+      "studentName": "Alex Johnson",
+      "blockchainFundamentals": "Blockchain Fundamentals",
+      "smartContract": "Smart Contract Development",
+      "decentralizedIdentity": "Decentralized Identity 101"
+    }
   },
   "language": {
     "english": "English",
@@ -46,5 +87,9 @@
     "connected": "Connected",
     "disconnected": "Disconnected",
     "address": "Wallet address"
+  },
+  "footer": {
+    "tagline": "Built for educators & creators.",
+    "copyright": "Learning Certificate Labs. All rights reserved."
   }
 }

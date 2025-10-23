@@ -2,11 +2,25 @@
   "common": {
     "title": "학습 증명서 DApp",
     "description": "블록체인에서 학습 증명서 발급 및 관리",
-    "language": "언어"
+    "language": "언어",
+    "loading": "로딩 중...",
+    "loadingSection": "섹션 로딩 중...",
+    "loadingComponent": "컴포넌트 로딩 중...",
+    "theme": "테마",
+    "theme.switchToDark": "다크 테마로 전환",
+    "theme.switchToLight": "라이트 테마로 전환",
+    "beta": "베타",
+    "optionalField": "선택 사항: {{field}}"
+  },
+  "header": {
+    "title": "학습 증명서",
+    "tagline": "안전한 스킬, 검증된 성장"
   },
   "navigation": {
     "home": "홈",
-    "mint": "증명서 발급"
+    "mint": "증명서 발급",
+    "openMenu": "메뉴 열기",
+    "closeMenu": "메뉴 닫기"
   },
   "certificate": {
     "title": "학습 증명서",
@@ -26,9 +40,35 @@
     "issued": "발급 대상",
     "date": "날짜",
     "total": "증명서 수",
+    "totalCount_one": "{{count}}개 증명서",
+    "totalCount_other": "{{count}}개 증명서",
     "latest": "최근 증명서",
     "course": "과목",
-    "pending": "대기 중"
+    "pending": "대기 중",
+    "studentNameRequired": "학생 이름은 필수 입력 항목입니다",
+    "recipientRequired": "수신 지갑 주소는 필수 입력 항목입니다",
+    "recipientInvalid": "유효한 이더리움 주소를 입력해주세요",
+    "courseNameRequired": "과목 이름은 필수 입력 항목입니다",
+    "completionDateRequired": "완료일은 필수 입력 항목입니다",
+    "issuanceChecklist": "발급 체크리스트",
+    "statistics": "통계",
+    "metrics": {
+      "minted": "발급된 증명서",
+      "courses": "활성 강좌",
+      "wallets": "검증된 지갑"
+    },
+    "details": "증명서 상세정보",
+    "preview": "미리보기",
+    "previewDescription": "아래는 발급될 증명서 미리보기입니다.",
+    "mintSuccessDemo": "증명서 발급이 완료되었습니다! (데모)",
+    "ipfsLabel": "IPFS",
+    "ipfsReminder": "발급 전에 IPFS에 증빙 자료를 저장해 신뢰할 수 있는 검증을 제공하세요.",
+    "samples": {
+      "studentName": "김지훈",
+      "blockchainFundamentals": "블록체인 기초",
+      "smartContract": "스마트 컨트랙트 개발",
+      "decentralizedIdentity": "탈중앙 신원 101"
+    }
   },
   "language": {
     "english": "English",
@@ -46,5 +86,9 @@
     "connected": "연결됨",
     "disconnected": "연결 해제",
     "address": "지갑 주소"
+  },
+  "footer": {
+    "tagline": "교육자와 크리에이터를 위한 서비스입니다.",
+    "copyright": "Learning Certificate Labs. 모든 권리를 보유합니다."
   }
 }

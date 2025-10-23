@@ -2,6 +2,10 @@
   "name": "learning-certificate-dapp",
   "private": true,
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "hardhat": "hardhat",
     "hardhat:node": "hardhat node",
     "hardhat:compile": "hardhat compile",
@@ -15,14 +19,19 @@
     "@nomiclabs/hardhat-ethers": "^2.0.0",
     "@nomiclabs/hardhat-etherscan": "^3.0.0",
     "@openzeppelin/contracts": "^4.9.3",
+    "@tailwindcss/postcss": "^4.1.15",
     "@typechain/ethers-v5": "^10.1.0",
     "@typechain/hardhat": "^6.1.2",
     "@types/react": "19.2.2",
+    "autoprefixer": "^10.4.21",
     "chai": "^4.2.0",
     "ethers": "^5.8.0",
     "hardhat": "^2.14.0",
     "hardhat-gas-reporter": "^1.0.8",
+    "postcss": "^8.5.6",
+    "sass": "^1.93.2",
     "solidity-coverage": "^0.8.0",
+    "tailwindcss": "^4.1.15",
     "ts-node": "^10.9.1",
     "typechain": "^8.1.0"
   },
@@ -39,6 +48,7 @@
     "react-dom": "^18.3.1",
     "react-i18next": "^16.1.0",
     "tailwind-merge": "^3.3.1",
+    "viem": "~2.38.3",
     "wagmi": "^2.18.1"
   }
 }

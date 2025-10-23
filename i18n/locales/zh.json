@@ -2,11 +2,25 @@
   "common": {
     "title": "学习证书DApp",
     "description": "在区块链上发行和管理学习证书",
-    "language": "语言"
+    "language": "语言",
+    "loading": "加载中...",
+    "loadingSection": "正在加载部分...",
+    "loadingComponent": "正在加载组件...",
+    "theme": "主题",
+    "theme.switchToDark": "切换到深色主题",
+    "theme.switchToLight": "切换到浅色主题",
+    "beta": "测试版",
+    "optionalField": "可选：{{field}}"
+  },
+  "header": {
+    "title": "学习证书",
+    "tagline": "安全技能，可信进步"
   },
   "navigation": {
     "home": "首页",
-    "mint": "发行证书"
+    "mint": "发行证书",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单"
   },
   "certificate": {
     "title": "学习成果证书",
@@ -26,9 +40,35 @@
     "issued": "颁发给",
     "date": "日期",
     "total": "证书数量",
+    "totalCount": "{{count}} 张证书",
+    "totalCount_other": "{{count}} 张证书",
     "latest": "最新证书",
     "course": "课程",
-    "pending": "待定"
+    "pending": "待定",
+    "studentNameRequired": "学生姓名为必填项",
+    "recipientRequired": "接收地址为必填项",
+    "recipientInvalid": "请输入有效的以太坊地址",
+    "courseNameRequired": "课程名称为必填项",
+    "completionDateRequired": "完成日期为必填项",
+    "issuanceChecklist": "发放清单",
+    "statistics": "统计",
+    "metrics": {
+      "minted": "已发行证书",
+      "courses": "活跃课程",
+      "wallets": "已验证钱包"
+    },
+    "details": "证书详情",
+    "preview": "预览",
+    "previewDescription": "这是即将铸造的证书预览。",
+    "mintSuccessDemo": "证书铸造成功！（演示）",
+    "ipfsLabel": "IPFS",
+    "ipfsReminder": "铸造前请先将媒体证明存储到 IPFS，以便实现可信验证。",
+    "samples": {
+      "studentName": "张三",
+      "blockchainFundamentals": "区块链基础",
+      "smartContract": "智能合约开发",
+      "decentralizedIdentity": "去中心化身份 101"
+    }
   },
   "language": {
     "english": "English",
@@ -46,5 +86,9 @@
     "connected": "已连接",
     "disconnected": "未连接",
     "address": "钱包地址"
+  },
+  "footer": {
+    "tagline": "为教育者和创作者而建。",
+    "copyright": "Learning Certificate Labs 版权所有。"
   }
 }

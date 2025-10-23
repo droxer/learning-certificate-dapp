@@ -15,7 +15,7 @@ const resources = {
 i18n.use(initReactI18next).init({
   resources,
   fallbackLng: "en",
-  debug: true,
+  debug: process.env.NODE_ENV === "development",
   interpolation: {
     escapeValue: false, // React 已自动转义
   },

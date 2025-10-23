@@ -20,37 +20,39 @@ const CertificateCard = ({ certificate }: CertificateCardProps) => {
   const { t } = useTranslation();
 
   return (
-    <div className="card-surface flex flex-col gap-5">
-      <div>
-        <div className="flex items-center justify-between gap-3">
-          <span className="rounded-full bg-indigo-500/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-200">
+    <div className="border border-gray-200 rounded-xl shadow-sm p-6 bg-white hover:shadow-md transition-shadow duration-200">
+      <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+        <div>
+          <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full mb-2">
             {t("certificate.course")}
           </span>
-          <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-semibold text-emerald-300">
-            {certificate.grade || t("certificate.pending")}
-          </span>
+          <h2 className="text-xl font-bold text-gray-900 mt-1">
+            {certificate.courseName}
+          </h2>
         </div>
-        <h2 className="mt-4 text-2xl font-semibold text-white">{certificate.courseName}</h2>
+        <span className="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
+          {certificate.grade || t("certificate.pending")}
+        </span>
       </div>
 
-      <dl className="grid gap-3 text-sm text-slate-300">
-        <div className="flex items-center justify-between gap-4 rounded-2xl border border-white/5 bg-white/5 px-4 py-3">
-          <dt className="font-medium text-slate-200">{t("certificate.issued")}</dt>
-          <dd className="text-right text-white">{certificate.studentName}</dd>
+      <div className="space-y-4">
+        <div className="flex justify-between items-center pb-3 border-b border-gray-100">
+          <span className="text-gray-600">{t("certificate.issued")}</span>
+          <span className="font-medium text-gray-900">{certificate.studentName}</span>
         </div>
-        <div className="flex items-center justify-between gap-4 rounded-2xl border border-white/5 bg-white/5 px-4 py-3">
-          <dt className="font-medium text-slate-200">{t("certificate.date")}</dt>
-          <dd className="text-right text-white">{certificate.completionDate}</dd>
+        <div className="flex justify-between items-center pb-3 border-b border-gray-100">
+          <span className="text-gray-600">{t("certificate.date")}</span>
+          <span className="font-medium text-gray-900">{certificate.completionDate}</span>
         </div>
         {certificate.ipfsHash && (
-          <div className="flex items-center justify-between gap-4 rounded-2xl border border-indigo-500/20 bg-indigo-500/10 px-4 py-3">
-            <dt className="font-medium text-indigo-200">IPFS</dt>
-            <dd className="truncate text-right text-indigo-100">{certificate.ipfsHash}</dd>
+          <div className="flex justify-between items-center pb-3 border-b border-gray-100">
+            <span className="text-gray-600">{t("certificate.ipfsLabel")}</span>
+            <span className="font-mono text-sm text-blue-600 truncate max-w-[120px]">{certificate.ipfsHash}</span>
           </div>
         )}
-      </dl>
+      </div>
 
-      <button className="btn-secondary self-start">
+      <button className="mt-6 w-full btn btn-secondary text-sm py-2.5">
         {t("certificate.view")}
       </button>
     </div>

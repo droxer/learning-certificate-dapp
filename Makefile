@@ -25,15 +25,10 @@ help:
 install:
 	pnpm install
 
-# Start development environment
-.PHONY: dev
-dev: hardhat-node
-	@echo "Development environment started!"
-	@echo "- Hardhat node running on http://127.0.0.1:8545"
-	@echo "To start Next.js dev server, run: make next-dev"
-
 # Start Hardhat node in background
-.PHONY: hardhat-node
+.PHONY: dev hardhat-node
+dev: hardhat-node
+
 hardhat-node:
 	@echo "Starting Hardhat node..."
 	@npx hardhat node > hardhat-node.log 2>&1 &
